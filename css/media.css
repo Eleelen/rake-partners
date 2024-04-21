@@ -1,0 +1,96 @@
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+	.hero__mob_cost {
+		display: block;
+	}
+	.hero__button {
+		bottom: 20px;
+    	height: 60px;
+	}
+	.hero__header {
+		display: none;
+	}
+	.hero__mob_cost {
+		width: 300px;
+	}
+	.hero__wrapper {
+		background-image: url(../images/background-hero-mob.png);
+	    background-size: cover;
+	    width: 100%;
+	    height: 340px;
+	}
+	.hero__title {
+		font-size: 18px;
+		line-height: 22px;
+	}
+	.banner__wrapper > .maun-title {
+		width: 58%;
+	}
+	.banner__img {
+		width: 200px;
+    	top: 20px;
+    	right: -35px;
+	}
+	.benefits__wrap1 img {
+    	width: auto;
+	}
+	.main-title {
+		font-size: 28px;
+		line-height: 32px;
+	}
+	.container {
+		width: 90%;
+		margin: 50px auto;
+	}
+	.main {
+		background-size: contain;
+	}
+	.stage__box, .benefits__container, 
+	.stage__border, .video__wrap, .contact__title, 
+	.footer__text, .terms-title, .benefits__wrap1  {
+		width: 100%;
+		margin: 0 auto;
+	}
+	.hero__title-text {
+		width: 299.43px;
+	}
+	.hero__title-currency {
+		width: 125px;
+	}
+	.steps__wrapper {
+		flex-direction: column;
+	}
+	.steps__dots-desc {
+		display: none;
+	}
+	.steps__dots-mob{
+		display: block;
+	}
+	.benefits__wrap > .title > br {
+		display: none;
+	}
+	.benefits__wrap {
+		height: auto;
+	}
+	.benefits__image {
+		width: 80px;
+	}
+	.banner__buttons {
+		margin: inherit;
+	}
+	.banner__button_wrap {
+		width: 264px;
+	}
+	.contact__title {
+		font-size: 34.59px;
+		line-height: 41.07px;
+	}
+	.stage__border, .stage__box, .benefits__container {
+		height: auto;
+	}
+	.stage__box p {
+		width: 65%;
+	}
+	.stage__image {
+		bottom: 20px;
+	}
+}
