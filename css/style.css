@@ -58,7 +58,7 @@ p {
 	width: 100%;
 }
 .hero__menu {
-	margin: 100px auto 25px;
+	margin: 80px auto 25px;
 }
 .hero__menu img {
 	margin: 0 auto;
@@ -85,6 +85,7 @@ p {
     flex-direction: column;
     align-items: center;
     position: relative;
+    overflow: hidden;
 }
 .hero__header {
 	position: relative;
@@ -122,8 +123,108 @@ p {
     height: 56px;
     box-shadow: 0px 0px 32px 0px #FF0AAD;
 }
-.hero__left, .hero__right {
-	position: relative;
+.hero__image-bottom {
+	position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+.hero-img-1 {
+	position: absolute;
+    width: 305px;
+    bottom: -98px;
+    left: -13px;
+}
+.hero-img-2 {
+	position: absolute;
+    width: 300px;
+    left: 80px;
+    bottom: 0;
+    z-index: 1;
+}
+.hero-img-3 {
+	position: absolute;
+    width: 137px;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+}
+.hero-img-4 {
+	position: absolute;
+    width: 80px;
+    left: 0;
+    bottom: 130px
+}
+.hero-img-5 {
+	position: absolute;
+    width: 75px;
+    left: 218px;
+    bottom: 15px;
+    z-index: 2;
+}
+.hero-img-6 {
+	position: absolute;
+    width: 60px;
+    left: 100px;
+    top: 50px;
+}
+.hero-img-7 {
+	position: absolute;
+    width: 85px;
+    left: 0px;
+    bottom: 50px;
+}
+.hero-img-8 {
+	position: absolute;
+    width: 77px;
+    left: 280px;
+    bottom: 150px;
+}
+.hero-img-9 {
+	position: absolute;
+    width: 200px;
+    left: 290px;
+    bottom: 0;
+}
+.hero-img-10 {
+	position: absolute;
+    width: 450px;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
+.hero-img-11 {
+    position: absolute;
+    width: 350px;
+    right: 0;
+    bottom: 0;
+}
+.hero-img-12 {
+	position: absolute;
+    width: 65px;
+    right: 190px;
+    top: 90px;
+}
+.hero-img-13 {
+	position: absolute;
+    width: 200px;
+    right: 290px;
+    bottom: 0;
+}
+.hero-img-14 {
+	position: absolute;
+    width: 180px;
+    right: 0;
+    bottom: -60px;
+    z-index: 3;
+}
+.hero-img-15 {
+	position: absolute;
+    width: 200px;
+    right: 290px;
+    bottom: 0;
 }
 .main-title {
 	text-transform: uppercase;
@@ -210,7 +311,8 @@ p {
     background-size: 400% 100%; /* Расширяем градиент в четыре раза по ширине */
     animation: gradientAnimation 3s linear infinite; /* Обновляем анимацию */
     text-decoration: none; /* Убираем подчеркивание текста, если оно есть */
-    color: white; /* Устанавливаем белый цвет текста */
+    color: white; 
+    z-index: 29;
 }
 @keyframes gradientAnimation {
     0% { background-position: 100% 50%; }
