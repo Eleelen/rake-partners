@@ -1,10 +1,109 @@
-@media only screen and (min-width: 320px) and (max-width: 768px) {
+@media only screen and (min-width: 320px) and (max-width: 1024px) {
+	.hero-img-1 {
+		position: absolute;
+	    width: 186px;
+	    bottom: -94px;
+	    left: -26px;
+	}
+	.hero-img-2 {
+		position: absolute;
+	    width: 180px;
+	    left: 20px;
+	    bottom: 0;
+	    z-index: 1;
+	}
+	.hero-img-3 {
+		position: absolute;
+		width: 87px;
+		left: 0;
+		bottom: 0;
+		z-index: 1;
+	}
+	.hero-img-4 {
+		position: absolute;
+		width: 30px;
+		left: 0;
+		bottom: 130px
+	}
+	.hero-img-5 {
+		position: absolute;
+		width: 35px;
+		left: 218px;
+		bottom: 15px;
+		z-index: 2;
+	}
+	.hero-img-6 {
+		position: absolute;
+		width: 30px;
+		left: 100px;
+		top: 50px;
+	}
+	.hero-img-7 {
+		position: absolute;
+		width: 45px;
+		left: 0px;
+		bottom: 50px;
+	}
+	.hero-img-8 {
+		position: absolute;
+	    width: 47px;
+	    left: 0;
+	    bottom: 100px;
+	}
+	.hero-img-9 {
+		position: absolute;
+		width: 100px;
+		left: 290px;
+		bottom: 0;
+	}
+	.hero-img-10 {
+		position: absolute;
+	    width: 250px;
+	    right: -30px;
+	    bottom: 0;
+	    z-index: 2;
+	}
+	.hero-img-11 {
+		position: absolute;
+	    width: 180px;
+	    right: 0;
+	    bottom: 0;
+	    z-index: 1;
+	}
+	.hero-img-12 {
+		position: absolute;
+	    width: 35px;
+	    right: 70px;
+	    top: 180px;
+	}
+	.hero-img-13 {
+		position: absolute;
+		width: 100px;
+		right: 290px;
+		bottom: 0;
+	}
+	.hero-img-14 {
+		position: absolute;
+	    width: 90px;
+	    right: 0;
+	    bottom: 20px;
+	    z-index: 30;
+	}
+	.hero-img-15 {
+		position: absolute;
+		width: 100px;
+		right: 290px;
+		bottom: 0;
+	}
+	.hero__title {
+		margin-top: 20px;
+	}
 	.hero__mob_cost {
 		display: block;
 	}
 	.hero__button {
 		bottom: 20px;
-    	height: 60px;
+		height: 60px;
 	}
 	.hero__header {
 		display: none;
@@ -14,24 +113,29 @@
 	}
 	.hero__wrapper {
 		background-image: url(../images/background-hero-mob.png);
-	    background-size: cover;
+		background-size: cover;
 	    width: 100%;
-	    height: 340px;
+	    background-position: center;
+	    height: 400px;
 	}
 	.hero__title {
 		font-size: 18px;
 		line-height: 22px;
+		width: 50%;
 	}
-	.banner__wrapper > .maun-title {
-		width: 58%;
+	.banner {
+		overflow-x: hidden;
+	}
+	.banner__wrapper .main-title {
+		width: 65%;
 	}
 	.banner__img {
 		width: 200px;
-    	top: 20px;
-    	right: -35px;
+		top: 20px;
+		right: -35px;
 	}
 	.benefits__wrap1 img {
-    	width: auto;
+		width: 154px;
 	}
 	.main-title {
 		font-size: 28px;
