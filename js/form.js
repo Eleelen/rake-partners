@@ -16,7 +16,7 @@
         document.location.href = `https://rakebit.com?land_token=${token}`;
         break;
       case "ui:open_login":
-        document.location.href = 'https://rakebit.com/signup/?rakebyte#signup';
+        document.location.href = 'https://preprod.rakebit.com/signup?landing=registration#signup';
         break;
     }
   }
