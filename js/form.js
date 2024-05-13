@@ -13,7 +13,7 @@
     switch (ui) {
       case "ui:confirm_signup":
         const token = event.data.token;
-        document.location.href = `https://rakebit.com?land_token=${token}`;
+        document.location.href = `./`;
         break;
       case "ui:open_login":
         document.location.href = 'https://preprod.rakebit.com/signup?landing=registration#signup';
