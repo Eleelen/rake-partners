@@ -602,3 +602,29 @@ footer .container {
 #TRUE_SIGNUP_FRAME body {
 	background: red!important;
 }
+.popup-2 {
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+.popup-2__overlay {
+
+}
+.popup-2__wrapper {
+	width: 600px;
+}
+.popup-2__border {
+	width: 600px;
+	margin: 0 auto;
+	box-shadow: 0px 0px 200px 0px #DE3D94;
+}
+.popup-2__wrap {
+	flex-wrap: nowrap;
+}
+.popup__buttons {
+	margin: 0 auto;
+}
+.popup-2{
+	display: none;
+}
