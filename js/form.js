@@ -84,23 +84,23 @@ document.addEventListener('DOMContentLoaded', function() {
   var popupButton = document.querySelector('.button__popup_2'); // предполагаем, что кнопка имеет тэг button
   if (popupButton) {
     popupButton.addEventListener('click', function() {
-      // Скрываем попап
-      var popup = document.querySelector('.popup-2');
-      if (popup) {
+      // Скрываем все попапы
+      var popups = document.querySelectorAll('.popup-2, .popup');
+      popups.forEach(function(popup) {
         popup.style.display = 'none';
-      }
+      });
 
-      // Показываем баннер, устанавливаем opacity на 1 и переходим к нему
+      // Показываем баннер и переходим к нему
       var banner = document.querySelector('.banner');
       if (banner) {
         banner.style.display = 'block'; // делаем баннер видимым
-        banner.style.setProperty('opacity', '0', 'important'); // Устанавливаем opacity в 1 с !important
         // Делаем плавный скролл к баннеру
         banner.scrollIntoView({ behavior: 'smooth' });
       }
     });
   }
 });
+
 
 
 
