@@ -28,7 +28,7 @@
       window.myFrameSignup = myFrame;
       let action = {
         name: 'action:add_style',
-        href: 'https://rakebit.com/css/style.css'
+        href: './../css/style.css'
       }
       window.myFrameSignup.contentWindow.postMessage(action, '*');
     }
