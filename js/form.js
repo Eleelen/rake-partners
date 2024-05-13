@@ -40,9 +40,3 @@ function showBanner() {
     document.location.href = './#banner';
   }
 }
-
-function handleSignupError(error) {
-  // Логика обработки ошибок регистрации
-  console.error("Ошибка регистрации:", error);
-  alert("Произошла ошибка при регистрации: " + error);
-}
