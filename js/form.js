@@ -54,7 +54,7 @@
 window.addEventListener('load', function (event) {
   let myFrame = document.querySelector('iframe#TRUE_SIGNUP_FRAME');
 
-  myBeam.onload = () => {
+  myFrame.onload = () => {  // Исправлено здесь
     window.myFrameSignup = myFrame;
     let action = {
       name: 'action:add_style',
@@ -78,6 +78,7 @@ function showPopup() {
     popup.style.display = 'block'; // Показываем попап
   }
 }
+
 
  
   /*window.onmessage = (event) => {
