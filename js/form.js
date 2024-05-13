@@ -76,6 +76,7 @@ function showPopup() {
   var popup = document.querySelector('.popup-2');
   if (popup) {
     popup.style.display = 'block'; // Показываем попап
+    popup.style.zIndex = '2999'; // Устанавливаем z-index
   }
 }
 
