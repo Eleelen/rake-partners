@@ -90,9 +90,10 @@ document.addEventListener('DOMContentLoaded', function() {
         popup.style.display = 'none';
       }
 
-      // Показываем баннер и переходим к нему
+      // Показываем баннер, убираем класс 'popup' и переходим к нему
       var banner = document.querySelector('.banner');
       if (banner) {
+        banner.classList.remove('popup'); // Убираем класс 'popup'
         banner.style.display = 'block'; // делаем баннер видимым
         // Делаем плавный скролл к баннеру
         banner.scrollIntoView({ behavior: 'smooth' });
@@ -100,6 +101,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 });
+
 
  
   /*window.onmessage = (event) => {
