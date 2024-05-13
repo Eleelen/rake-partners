@@ -90,17 +90,18 @@ document.addEventListener('DOMContentLoaded', function() {
         popup.style.display = 'none';
       }
 
-      // Показываем баннер, убираем класс 'popup' и переходим к нему
+      // Показываем баннер, устанавливаем opacity на 1 и переходим к нему
       var banner = document.querySelector('.banner');
       if (banner) {
-        banner.classList.remove('popup'); // Убираем класс 'popup'
         banner.style.display = 'block'; // делаем баннер видимым
+        banner.style.setProperty('opacity', '0', 'important'); // Устанавливаем opacity в 1 с !important
         // Делаем плавный скролл к баннеру
         banner.scrollIntoView({ behavior: 'smooth' });
       }
     });
   }
 });
+
 
 
  
