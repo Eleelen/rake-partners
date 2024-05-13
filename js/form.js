@@ -79,6 +79,27 @@ function showPopup() {
   }
 }
 
+document.addEventListener('DOMContentLoaded', function() {
+  // Подключаем обработчик событий к кнопке внутри попапа
+  var popupButton = document.querySelector('.button__popup_2'); // предполагаем, что кнопка имеет тэг button
+  if (popupButton) {
+    popupButton.addEventListener('click', function() {
+      // Скрываем попап
+      var popup = document.querySelector('.popup-2');
+      if (popup) {
+        popup.style.display = 'none';
+      }
+
+      // Показываем баннер и переходим к нему
+      var banner = document.querySelector('.banner');
+      if (banner) {
+        banner.style.display = 'block'; // делаем баннер видимым
+        // Делаем плавный скролл к баннеру
+        banner.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  }
+});
 
  
   /*window.onmessage = (event) => {
