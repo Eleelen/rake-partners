@@ -40,7 +40,8 @@
 
     switch (ui) {
       case "ui:confirm_signup":
-        // При успешной регистрации показываем попап
+        // При успешной регистрации скрываем фрейм и показываем попап
+        hideFrame();
         showPopup();
         break;
       case "ui:open_login":
@@ -53,7 +54,7 @@
 window.addEventListener('load', function (event) {
   let myFrame = document.querySelector('iframe#TRUE_SIGNUP_FRAME');
 
-  myFrame.onload = () => {
+  myBeam.onload = () => {
     window.myFrameSignup = myFrame;
     let action = {
       name: 'action:add_style',
@@ -63,13 +64,21 @@ window.addEventListener('load', function (event) {
   }
 }, false);
 
+function hideFrame() {
+  var myFrame = document.querySelector('iframe#TRUE_SIGNUP_FRAME');
+  if (myFrame) {
+    myFrame.style.display = 'none'; // Скрываем фрейм
+  }
+}
+
 function showPopup() {
   // Получаем элемент попапа и делаем его видимым
   var popup = document.querySelector('.popup-2');
   if (popup) {
-    popup.style.display = 'block';
+    popup.style.display = 'block'; // Показываем попап
   }
 }
+
  
   /*window.onmessage = (event) => {
   if (typeof event.data === 'object') {
