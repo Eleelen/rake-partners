@@ -323,9 +323,12 @@ p {
 }
 .button a {
 	color: #fff;
-	display: block;
-	width: 100%;
-	text-align: center;
+    width: 100%;
+    text-align: center;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .video__wrapper {
 	gap: 94px;
@@ -400,6 +403,7 @@ p {
 }
 .video__wrap img {
 	width: 100%;
+	cursor: pointer;
 }
 .benefits__wrapper {
 	gap: 37px;
@@ -627,4 +631,32 @@ footer .container {
 }
 .popup-2 {
 	display: none;
+}
+.video-popup {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Убедитесь, что z-index достаточно высок */
+}
+
+.video-popup-content {
+  position: relative;
+  background: white;
+  padding: 20px;
+  width: 80%;
+  max-width: 640px;
+}
+
+.video-close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 30px;
+  cursor: pointer;
 }
