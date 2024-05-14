@@ -612,11 +612,10 @@ footer .container {
 	top: 50%;
 	transform: translate(-50%, -50%);
 }
-.popup-2__overlay {
-
-}
 .popup-2__wrapper {
 	width: 600px;
+    padding: 10%;
+    gap: 5px;
 }
 .popup-2__border {
 	width: 600px;
@@ -632,8 +631,9 @@ footer .container {
 .popup-2 {
 	display: none;
 }
-.popup-2__wrap:nth-of-type(2n, 3n) {
-	background: inherit;
+.popup-2__wrap:nth-of-type(2n), 
+.popup-2__wrap:nth-of-type(3n) {
+	background: unset;
 }
 .popup-2__wrap img {
 	width: 63px;
@@ -646,8 +646,18 @@ footer .container {
 }
 .popup-2__border .main-title {
 	text-align: center;
+	margin: 0 auto;
 }
-.video-popup {
+.hiddenp {
+  display: none!important;
+}
+.button__video {
+	border: none;
+    padding: 0;
+    margin: 0;
+    border-radius: 20px;
+}
+.popup-video {
   position: fixed;
   left: 0;
   top: 0;
@@ -657,12 +667,13 @@ footer .container {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: opacity 0.5s, visibility 0.5s
   z-index: 1000; /* Убедитесь, что z-index достаточно высок */
 }
 
 .video-popup-content {
   position: relative;
-  background: white;
+  background: #141414;
   padding: 20px;
   width: 80%;
   max-width: 640px;
