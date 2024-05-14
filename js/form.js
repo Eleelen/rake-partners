@@ -47,24 +47,23 @@ function showPopup() {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-  // Подключаем обработчик событий к кнопке внутри попапа
-  var popupButton = document.querySelector('.button__popup_2'); // предполагаем, что кнопка имеет тэг button
+  var popupButton = document.querySelector('.button__popup_2'); 
   if (popupButton) {
     popupButton.addEventListener('click', function() {
-      // Скрываем все попапы
       var popups = document.querySelectorAll('.popup-2, .popup');
       popups.forEach(function(popup) {
         popup.style.display = 'none';
       });
 
-      // Показываем баннер и переходим к нему
       var banner = document.querySelector('.banner');
       if (banner) {
-        banner.style.display = 'block'; // делаем баннер видимым
-        // Делаем плавный скролл к баннеру
-        banner.scrollIntoView({ behavior: 'smooth' });
+        banner.style.display = 'block';
+        setTimeout(function() {
+          banner.scrollIntoView({ behavior: 'smooth' });
+        }, 100); // Задержка может помочь убедиться, что баннер видим перед скроллом
       }
     });
   }
 });
+
 
