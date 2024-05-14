@@ -632,6 +632,21 @@ footer .container {
 .popup-2 {
 	display: none;
 }
+.popup-2__wrap:nth-of-type(2n, 3n) {
+	background: inherit;
+}
+.popup-2__wrap img {
+	width: 63px;
+}
+.popup-2__wrap h3 {
+	font-size: 20px;
+}
+.popup-2__wrap p {
+	font-size: 14px;
+}
+.popup-2__border .main-title {
+	text-align: center;
+}
 .video-popup {
   position: fixed;
   left: 0;
