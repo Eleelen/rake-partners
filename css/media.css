@@ -232,4 +232,7 @@
 	.hero__button {
 		min-width: 90%!important;
 	}
+	.button {
+		min-width: 100%;
+	}
 }
