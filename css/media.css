@@ -180,9 +180,9 @@
 	}
 	.banner__buttons {
 		margin: inherit;
+		width: 100%;
 	}
 	.banner__button_wrap {
-		/*width: 264px;*/
 		min-width: 100%;
 	}
 	.contact__title {
@@ -228,12 +228,9 @@
 }
 @media only screen and (min-width: 320px) and (max-width: 420px) {
 	.button__banner {
-		width: 200px;
+		max-width: 100%;
 	}
 	.hero__button {
-		min-width: 90%!important;
-	}
-	.button {
-		min-width: 100%;
+		min-width: 95%;
 	}
 }
