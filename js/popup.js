@@ -1,20 +1,12 @@
 document.addEventListener('DOMContentLoaded', function() {
-    var button = document.querySelector('.hero__button a');
+    var buttons = document.querySelectorAll('.hero__button a, .button__contact a');
     var popup = document.querySelector('.popup');
 
-    button.addEventListener('click', function(event) {
-        event.preventDefault();
-        popup.classList.toggle('hidden');
-    });
-});
-
-document.addEventListener('DOMContentLoaded', function() {
-    var button = document.querySelector('.button__contact a');
-    var popup = document.querySelector('.popup');
-
-    button.addEventListener('click', function(event) {
-        event.preventDefault();
-        popup.classList.toggle('hidden');
+    buttons.forEach(function(button) {
+        button.addEventListener('click', function(event) {
+            event.preventDefault();
+            popup.classList.toggle('hidden'); // Переключаем видимость попапа
+        });
     });
 });
 
