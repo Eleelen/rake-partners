@@ -182,7 +182,8 @@
 		margin: inherit;
 	}
 	.banner__button_wrap {
-		width: 264px;
+		/*width: 264px;*/
+		width: 100%;
 	}
 	.contact__title {
 		font-size: 34.59px;
