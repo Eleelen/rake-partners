@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', function() {
       // Перезагрузка страницы после закрытия попапа, если нужно
       setTimeout(function() {
         window.location.reload();
-      }, 1000); // Делаем задержку перед перезагрузкой
+      }, 5000); // Делаем задержку перед перезагрузкой
     });
   }
 });
