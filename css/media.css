@@ -228,8 +228,8 @@
 }
 @media only screen and (min-width: 320px) and (max-width: 475px) {
 	.button__banner {
-		min-width: 95%;
-    	width: 95%;
+		min-width: 100%;
+    	width: 100%;
 	}
 	.banner__button_wrap {
 		min-width: 100%;
