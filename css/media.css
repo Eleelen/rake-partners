@@ -230,6 +230,6 @@
 		width: 200px;
 	}
 	.hero__button {
-		width: 90%!important;
+		min-width: 90%!important;
 	}
 }
