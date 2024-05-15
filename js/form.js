@@ -17,7 +17,7 @@ window.onmessage = (event) => {
 }
 
 function reloadFrame() {
-    var myFrame = document.querySelector('iframe[src*="preprod.rakebit.com/signup"]');
+    var myFrame = document.querySelector('iframe#TRUE_SIGNUP_FRAME');
     if (myFrame) {
         var baseSrc = 'https://preprod.rakebit.com/signup?landing=registration';  // Базовый URL
         var unique = new Date().getTime();  // Создание уникального timestamp
