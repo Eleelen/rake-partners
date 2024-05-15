@@ -102,7 +102,7 @@ p {
 .hero__title {
 	font-size: 33.71px;
 	font-weight: 600;
-	line-height: 50.56px;
+	line-height: 35px;
 	text-align: center;
 	color: #fff;
 	margin-top: 50px;
@@ -307,7 +307,7 @@ p {
     align-items: center;
     justify-content: center;
     width: 280px;
-    height: 48px;
+    height: 56px;
     border-radius: 8px;
     cursor: pointer;
     background: linear-gradient(102.44deg, #FF62B9 4.86%, #DD1A85 32.19%, #DE2F8E 57.23%, #FF62B6 99.56%);

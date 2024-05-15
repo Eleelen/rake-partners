@@ -237,4 +237,8 @@
 	.hero__button {
 		min-width: 90%;
 	}
+	.button__popup_2 {
+		min-width: 90%;
+    	margin: 0 auto;
+	}
 }
