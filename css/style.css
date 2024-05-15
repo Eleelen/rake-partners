@@ -601,7 +601,7 @@ footer .container {
 	height: 100%;
 }
 .banner {
-	/*display: none;*/
+	display: none;
 }
 #TRUE_SIGNUP_FRAME body {
 	background: red!important;
