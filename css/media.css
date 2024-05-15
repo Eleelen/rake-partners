@@ -183,7 +183,7 @@
 		width: 100%;
 	}
 	.banner__button_wrap {
-		min-width: 100%;
+		width: 264px;
 	}
 	.contact__title {
 		font-size: 34.59px;
@@ -226,10 +226,13 @@
 		z-index: 29;
 	}
 }
-@media only screen and (min-width: 320px) and (max-width: 420px) {
+@media only screen and (min-width: 320px) and (max-width: 475px) {
 	.button__banner {
 		min-width: 95%;
     	width: 95%;
+	}
+	.banner__button_wrap {
+		min-width: 100%;
 	}
 	.hero__button {
 		min-width: 95%;
