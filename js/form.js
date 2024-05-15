@@ -1,18 +1,28 @@
 window.onmessage = (event) => {
-  if (typeof event.data === 'object') {
-    const ui = event.data.name;
-    console.log(event.data);
+    if (typeof event.data === 'object' && event.data) {
+        const ui = event.data.name;
+        console.log("Received data: ", event.data);
 
-    switch (ui) {
-      case "ui:confirm_signup":
-        hideFrame();
-        showPopup();
-        break;
-      case "ui:open_login":
-        document.location.href = 'https://preprod.rakebit.com/signup?landing=registration#signup';
-        break;
+        switch (ui) {
+            case "ui:confirm_signup":
+                hidePopupMain(); // Скрывает основной попап
+                showPopup(); // Показывает другой попап, если это необходимо
+                reloadFrame(); // Перезагружает фрейм для сброса состояния регистрации
+                break;
+            case "ui:open_login":
+                document.location.href = 'https://preprod.rakebit.com/signup?landing=registration#signup';
+                break;
+        }
     }
-  }
+}
+
+function reloadFrame() {
+    var myFrame = document.querySelector('iframe[src*="preprod.rakebit.com/signup"]');
+    if (myFrame) {
+        var baseSrc = 'https://preprod.rakebit.com/signup?landing=registration';  // Базовый URL
+        var unique = new Date().getTime();  // Создание уникального timestamp
+        myFrame.src = baseSrc + '#signup&reload=' + unique;  // Добавление timestamp к URL
+    }
 }
 
 window.addEventListener('load', function () {
@@ -28,11 +38,11 @@ window.addEventListener('load', function () {
   }
 }, false);
 
-function hideFrame() {
-  var myFrame = document.querySelector('iframe#TRUE_SIGNUP_FRAME');
-  if (myFrame) {
-    myFrame.style.display = 'none';
-  }
+function hidePopupMain() {
+   var popup = document.querySelector('.popup'); // Селектор для элемента попапа
+    if (popup) {
+        popup.classList.add('hidden'); // Добавляем класс 'hidden' к попапу
+    }
 }
 
 function showPopup() {
@@ -51,7 +61,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
       var popups = document.querySelectorAll('.popup-2, .popup');
       popups.forEach(function(popup) {
-        popup.style.display = 'none';
+        if (popup.classList.contains('popup-2')) {
+          popup.style.display = 'none'; // Установка display:none только для элементов с классом popup-2
+        } else if (popup.classList.contains('popup')) {
+          popup.classList.add('hidden'); // Добавление класса hidden только для элементов с классом popup
+        }
       });
 
       var banner = document.querySelector('.banner');
@@ -60,10 +74,9 @@ document.addEventListener('DOMContentLoaded', function() {
         banner.scrollIntoView({ behavior: 'smooth' });
       }
 
-      // Перезагрузка страницы после закрытия попапа, если нужно
-      setTimeout(function() {
+      /*setTimeout(function() {
         window.location.reload();
-      }, 5000); // Делаем задержку перед перезагрузкой
+      }, 5000); */
     });
   }
 });

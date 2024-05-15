@@ -567,16 +567,15 @@ footer .container {
 	color: #999999;
 }
 .hidden {
-    display: none !important;
+    display: none; 
 }
-
 .popup {
     position: fixed;
     left: 0;
     top: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0,0,0,0.5); /* Полупрозрачный черный фон */
+    background-color: rgba(0,0,0,0.5);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -585,7 +584,6 @@ footer .container {
     transition: opacity 0.5s, visibility 0.5s;
     z-index: 299;
 }
-
 .popup:not(.hidden) {
     opacity: 1;
     visibility: visible;
@@ -602,9 +600,6 @@ footer .container {
 }
 .banner {
 	display: none;
-}
-#TRUE_SIGNUP_FRAME body {
-	background: red!important;
 }
 .popup-2 {
 	position: fixed;
@@ -669,9 +664,8 @@ footer .container {
   justify-content: center;
   align-items: center;
   transition: opacity 0.5s, visibility 0.5s
-  z-index: 1000; /* Убедитесь, что z-index достаточно высок */
+  z-index: 1000; 
 }
-
 .video-popup-content {
   position: relative;
   background: #141414;
@@ -679,11 +673,23 @@ footer .container {
   width: 80%;
   max-width: 640px;
 }
-
 .video-close {
   position: absolute;
   top: 10px;
   right: 20px;
   font-size: 30px;
   cursor: pointer;
+}
+.try-it-modal__close {
+    position: absolute;
+    background: #000;
+    border: 1px solid #fff;
+    color: #fff;
+    font-size: 25px;
+    width: 40px;
+    right: 2%;
+    top: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

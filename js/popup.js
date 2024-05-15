@@ -8,11 +8,16 @@ document.addEventListener('DOMContentLoaded', function() {
             popup.classList.toggle('hidden'); // Переключаем видимость попапа
         });
     });
+window.closeModal = function() {
+        console.log('Закрытие попапа');
+        popup.classList.add('hidden');
+        console.log('После закрытия: ', popup.classList.contains('hidden'));
+    }
 });
 
 
 document.addEventListener('DOMContentLoaded', function() {
-  var button = document.querySelector('.button__video a');
+  var button = document.querySelector('.button__video');
   var popupVideo = document.querySelector('.popup-video');
   var closeBtn = document.querySelector('.video-close');
   var videoIframe = popupVideo.querySelector('iframe');
