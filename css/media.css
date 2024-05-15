@@ -40,9 +40,9 @@
 	}
 	.hero-img-7 {
 		position: absolute;
-		width: 45px;
-		left: 0px;
-		bottom: 50px;
+	    width: 80px;
+	    left: -10px;
+	    bottom: 30px;
 	}
 	.hero-img-8 {
 		position: absolute;
@@ -230,6 +230,6 @@
 		width: 200px;
 	}
 	.hero__button {
-		width: 90%;
+		width: 90%!important;
 	}
 }
