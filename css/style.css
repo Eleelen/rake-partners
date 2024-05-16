@@ -76,7 +76,7 @@ p {
     text-align: center;
 }
 .hero__wrapper {
-	background-image: url(../images/background-hero.png);
+	background-image: url(../images/background-hero.webp);
 	background-size: cover;
 	background-repeat: no-repeat;
 	height: 552px;
