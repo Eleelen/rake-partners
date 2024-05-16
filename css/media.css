@@ -250,4 +250,19 @@
 		min-width: 90%;
     	margin: 0 auto;
 	}
+	.banner__wrap img {
+		width: 60px;
+	}
+	.banner__button_wrap img {
+		width: 25px;
+	}
+	.banner__wrap {
+		position: relative;
+	}
+	.banner .banner__box .title {
+		font-size: 20px;
+		position: absolute;
+		top: 20px;
+		left: 90px;
+	}
 }

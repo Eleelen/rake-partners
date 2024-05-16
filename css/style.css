@@ -641,7 +641,8 @@ footer .container {
 }
 .popup-2__border .main-title {
 	text-align: center;
-	margin: 0 auto;
+    margin: 0px auto;
+    padding-bottom: 10px;
 }
 .hiddenp {
   display: none!important;
