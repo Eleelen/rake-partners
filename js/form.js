@@ -10,7 +10,7 @@ window.onmessage = (event) => {
                 reloadFrame(); // Перезагружает фрейм для сброса состояния регистрации
                 break;
             case "ui:open_login":
-                document.location.href = ' https://rakebit.com/signup?landing=registration';
+                document.location.href = 'https://rakebit.com/signup?landing=registration';
                 break;
         }
     }
@@ -19,7 +19,7 @@ window.onmessage = (event) => {
 function reloadFrame() {
     var myFrame = document.querySelector('iframe#TRUE_SIGNUP_FRAME');
     if (myFrame) {
-        var baseSrc = ' https://rakebit.com/signup?landing=registration';  // Базовый URL
+        var baseSrc = 'https://rakebit.com/signup?landing=registration';  // Базовый URL
         var unique = new Date().getTime();  // Создание уникального timestamp
         myFrame.src = baseSrc + '#signup&reload=' + unique;  // Добавление timestamp к URL
     }

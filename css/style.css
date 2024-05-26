@@ -597,6 +597,16 @@ footer .container {
 .form__iframe {
 	width: 100%;
 	height: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.form__iframe iframe {
+    width: inherit;
+    height: inherit;
+    border-radius: 10px;
+    position: relative;
 }
 .banner {
 	display: none;
@@ -683,8 +693,7 @@ footer .container {
 }
 .try-it-modal__close {
     position: absolute;
-    background: #000;
-    border: 1px solid #fff;
+    background: inherit;
     color: #fff;
     font-size: 25px;
     width: 40px;
