@@ -5,9 +5,9 @@ window.onmessage = (event) => {
 
         switch (ui) {
             case "ui:confirm_signup":
-                hidePopupMain(); // Скрывает основной попап
-                showPopup(); // Показывает другой попап, если это необходимо
-                reloadFrame(); // Перезагружает фрейм для сброса состояния регистрации
+                hidePopupMain(); 
+                showPopup(); 
+                reloadFrame(); 
                 break;
             case "ui:open_login":
                 document.location.href = 'https://rakebit.com/signup?landing=registration';
@@ -17,13 +17,19 @@ window.onmessage = (event) => {
 }
 
 function reloadFrame() {
-    var myFrame = document.querySelector('iframe#TRUE_SIGNUP_FRAME');
-    if (myFrame) {
-        var baseSrc = 'https://rakebit.com/signup?landing=registration';  // Базовый URL
-        var unique = new Date().getTime();  // Создание уникального timestamp
-        myFrame.src = baseSrc + '#signup&reload=' + unique;  // Добавление timestamp к URL
+    var myFrameContainer = document.querySelector('div#TRUE_SIGNUP_FRAME');
+    if (myFrameContainer) {
+        var oldFrame = myFrameContainer.querySelector('iframe');
+        if (oldFrame) {
+            var baseSrc = 'https://rakebit.com/signup?landing=registration';  
+            var unique = new Date().getTime() + Math.random().toString(36).substr(2, 9);  
+            var newFrame = document.createElement('iframe');
+            newFrame.src = baseSrc + '#signup&reload=' + unique;  
+            myFrameContainer.replaceChild(newFrame, oldFrame); 
+        }
     }
 }
+
 
 window.addEventListener('load', function () {
   let myFrame = document.querySelector('iframe#TRUE_SIGNUP_FRAME');
