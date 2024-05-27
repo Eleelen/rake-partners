@@ -16,23 +16,41 @@ window.onmessage = (event) => {
     }
 }
 
+function temporarilyDisableAlert() {
+    const originalAlert = window.alert;
+    window.alert = function() {};
+
+    setTimeout(() => {
+        window.alert = originalAlert;
+    }, 5000); // Отключить alert на 5 секунд (или любое другое необходимое время)
+}
+
 function reloadFrame() {
+    temporarilyDisableAlert(); // Вызов временного отключения alert
+
     var myFrameContainer = document.querySelector('div#TRUE_SIGNUP_FRAME');
     if (myFrameContainer) {
         var oldFrame = myFrameContainer.querySelector('iframe');
         if (oldFrame) {
-            var baseSrc = 'https://rakebit.com/signup?landing=registration';  
-            var unique = new Date().getTime() + Math.random().toString(36).substr(2, 9);  
+            var baseSrc = 'https://rakebit.com/signup?landing=registration';
+            var unique = new Date().getTime() + Math.random().toString(36).substr(2, 9);
             var newFrame = document.createElement('iframe');
-            newFrame.src = baseSrc + '#signup&reload=' + unique;  
-            myFrameContainer.replaceChild(newFrame, oldFrame); 
+            newFrame.src = baseSrc + '#signup&reload=' + unique;
+            newFrame.onload = function() {
+                let action = {
+                    name: 'action:add_style',
+                    href: './../css/style.css'
+                };
+                newFrame.contentWindow.postMessage(action, '*');
+            };
+            myFrameContainer.replaceChild(newFrame, oldFrame);
         }
     }
 }
 
 
 window.addEventListener('load', function () {
-  let myFrame = document.querySelector('iframe#TRUE_SIGNUP_FRAME');
+  let myFrame = document.querySelector('div#TRUE_SIGNUP_FRAME');
 
   myFrame.onload = () => {
     window.myFrameSignup = myFrame;
