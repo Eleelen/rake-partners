@@ -270,11 +270,13 @@
 							<span class="toggle-icon"><img src="./images/arrow-bottom.svg" alt="Arrow icon"></span>
 						</div>
 						<div class="terms-content" style="display:none;">
-							<div>1. THE SPIN MILLION EXCLUSIVE BONUS IS ONLY AVAILABLE TO NEWLY REGISTERED PLAYERS WHO HAVE NEVER MADE A DEPOSIT IN OUR CASINO AND ARE AT LEAST 18 YEARS OLD.</div>
-							<div>2. IN ORDER FOR A PLAYER TO QUALIFY FOR THE EXCLUSIVE 150% UP TO $/€200 + 100 FREE SPINS BONUS, THE MINIMUM DEPOSIT AMOUNT REQUIRED IS $/€20.</div>
-							<div>3. THE 150% UP TO $/€200 + 100 FREE SPINS EXCLUSIVE BONUS IS AVAILABLE FOR NEWLY REGISTERED PLAYERS ONLY.</div>
-							<div>4. THE MAXIMUM BONUS AMOUNT PLAYERS CAN RECEIVE, IN TOTAL, ON THEIR FIRST DEPOSIT IS $/€200 AND 100 FREE SPINS.</div>
-							<div>5. UNLESS OTHERWISE STATED, THE SPIN MILLION EXCLUSIVE BONUS CAN ONLY BE CLAIMED ONCE AND CANNOT BE COMBINED WITH OTHER PROMOTIONS.</div>
+							<div>1. The promo timed to coincide with the grand opening of <a href="https://rakebit.com">Rakebit.com</a></div>
+							<div>2. The end of promo will be informed in Rakebit official communication channels.</div>
+							<div>3. The promo is divided into 3 (three) stages. Every stage has it's own prizepool, winners and activities to take part.</div>
+							<div>4. Players who have already qualified can still be eligible for prizes in the next period.</div>
+							<div>5. The cash prizes will be credited as playable funds by <a href="https://rakebit.com">Rakebit.com</a> after each promotion period ends. Any winnings generated from betting with these playable funds will be withdrawable.</div>
+							<div>6. <a href="https://rakebit.com">Rakebit.com</a> reserves the right to void scores or withhold prizes for reasons such as apparent errors, technical faults, cheating or collusion with other players.</div>
+							<div>7. <a href="https://rakebit.com">Rakebit.com</a> holds the ultimate decision on these terms and has the right to modify, suspend, or cancel the promotion without prior notification.</div>
 						</div>
 					</div>
 				</div>
@@ -371,10 +373,27 @@
 			<iframe width="560" height="315" src="https://www.youtube.com/embed/vR6fC3PW6t0?si=9Q8MiKkVTNlmF049" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 		</div>
 	</div>
-	<div class="form-type" data-tf-live="01HZ6XT4SAGC15B54ZXVC0AXCH"></div>
+	<div class="form-type" data-tf-live="01HZ6XT4SAGC15B54ZXVC0AXCH" style="display: none;"></div>
 	<script src="//embed.typeform.com/next/embed.js"></script>
 	<script type="text/javascript" src="js/toggle.js"></script>
 	<script type="text/javascript" src="js/popup.js"></script>
 	<script type="text/javascript" src="js/form.js"></script>
+	<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const button = document.querySelector('.button__form_type');
+    const formType = document.querySelector('.form-type');
+
+    button.addEventListener('click', function() {
+      // Открываем попап Typeform
+      formType.style.display = 'block';
+      // Добавляем класс для видимости
+      formType.classList.add('tf-form-active');
+
+      // Инициализируем Typeform
+      window.tf.load();
+    });
+  });
+</script>
+
 </body>
 </html>

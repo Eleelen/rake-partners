@@ -517,6 +517,7 @@ p {
 }
 .terms-content {
     margin-top: 25px;
+    text-transform: uppercase;
 }
 .toggle-icon {
     transition: transform 0.3s ease; 
@@ -708,4 +709,7 @@ footer .container {
     height: 100%;
     position: relative;
     z-index: 2999;
+}
+.tf-form-active {
+  display: block !important;
 }
