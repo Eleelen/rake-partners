@@ -22,11 +22,11 @@ function temporarilyDisableAlert() {
 
     setTimeout(() => {
         window.alert = originalAlert;
-    }, 5000); // Отключить alert на 5 секунд (или любое другое необходимое время)
+    }, 5000); 
 }
 
 function reloadFrame() {
-    temporarilyDisableAlert(); // Вызов временного отключения alert
+    temporarilyDisableAlert(); 
 
     var myFrameContainer = document.querySelector('div#TRUE_SIGNUP_FRAME');
     if (myFrameContainer) {
@@ -63,9 +63,9 @@ window.addEventListener('load', function () {
 }, false);
 
 function hidePopupMain() {
-   var popup = document.querySelector('.popup'); // Селектор для элемента попапа
+   var popup = document.querySelector('.popup');
     if (popup) {
-        popup.classList.add('hidden'); // Добавляем класс 'hidden' к попапу
+        popup.classList.add('hidden');
     }
 }
 

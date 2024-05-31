@@ -703,3 +703,9 @@ footer .container {
     align-items: center;
     justify-content: center;
 }
+.form-type {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 2999;
+}
